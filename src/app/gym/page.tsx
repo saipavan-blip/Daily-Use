@@ -95,9 +95,8 @@ export default function GymPage() {
             <button
   key={cat.name}
   onClick={() => {
-    alert("Clicked " + cat.name);
-    setSelectedCategory(cat.name);
-  }}
+  setSelectedCategory(cat.name);
+}}
   className="group relative aspect-square w-full overflow-hidden rounded-xl active:scale-95 transition-all duration-200 border border-outline-variant/30"
 >
               <div 

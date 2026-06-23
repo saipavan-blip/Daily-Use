@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#001b3f", "on-surface": "#181c22", "on-tertiary-container": "#fffbff", "on-primary": "#ffffff", "surface-container": "#ecedf7", "surface-variant": "#e0e2ec", "on-tertiary-fixed-variant": "#763400", "secondary-container": "#e1e3e4", tertiary: "#964400", "on-error-container": "#93000a", "primary-container": "#0072e3", "on-tertiary": "#ffffff", secondary: "#5c5f60", "on-secondary-container": "#626566", background: "#f9f9ff", "on-secondary-fixed": "#191c1d", "on-surface-variant": "#414753", "on-secondary": "#ffffff", "primary-fixed": "#d7e3ff", "surface-container-highest": "#e0e2ec", "inverse-surface": "#2d3038", "tertiary-fixed": "#ffdbc9", "on-primary-fixed-variant": "#00458e", surface: "#f9f9ff", error: "#ba1a1a", "on-background": "#181c22", "on-error": "#ffffff", "surface-container-high": "#e6e8f1", "on-tertiary-fixed": "#321200", primary: "#005ab6", "surface-dim": "#d8dae3", "tertiary-fixed-dim": "#ffb68c", "secondary-fixed": "#e1e3e4", "secondary-fixed-dim": "#c5c7c8", "surface-tint": "#005cba", "on-primary-container": "#fefcff", "tertiary-container": "#bd5700", outline: "#717785", "error-container": "#ffdad6", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eff0fa", "primary-fixed-dim": "#abc7ff", "surface-container-low": "#f2f3fd", "surface-bright": "#f9f9ff", "on-secondary-fixed-variant": "#454748", "surface-container-lowest": "#ffffff", "outline-variant": "#c1c6d5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {lg: "24px", md: "16px", xs: "4px", base: "4px", sm: "8px", "container-margin": "16px", xl: "32px", gutter: "12px"}, fontFamily: {"label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "metric-xl": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-lg": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "title-md": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "metric-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}]}}}};</script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-glow {
+            box-shadow: 0 0 20px rgba(202, 243, 0, 0.15);
+        }
+        .glass-card {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background dark:bg-background z-40">
+<div class="flex items-center justify-between px-container-margin h-14 w-full">
+<div class="flex items-center gap-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-primary dark:text-primary">fitness_center</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary">Daily Use</h1>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:opacity-80 active:scale-95 transition-transform text-primary dark:text-primary">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-container-margin pt-sm pb-32">
+<!-- Section Header -->
+<div class="flex flex-col mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-xs">Exercise Library</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select a muscle group to view specific exercises.</p>
+</div>
+<!-- Bento Search Bar -->
+<div class="relative mb-lg">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant text-body-lg">search</span>
+</div>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 pl-10 pr-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary-container" placeholder="Search exercises..." type="text"/>
+</div>
+<!-- Muscle Group Bento Grid -->
+<div class="grid grid-cols-2 gap-md" id="category-grid">
+<!-- Category Card: Biceps -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Biceps')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A close-up, high-contrast photograph of well-defined arm muscles during a workout in a moody, dark corporate gym environment. The lighting is cinematic, featuring sharp highlights and deep obsidian shadows, focusing on the texture of the skin and muscle fibers. The color palette is dominated by dark grays and blacks with a subtle electric lime glow illuminating the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgAiQmP3qN5hqr48N8-vZMNP2GKPAyzyX8XQWZhXqz8sHyjnbU1DUiO9vXCnet3Q_KI-k4o9bPdj9hemPLqY7tET0C4pZNqf0x4N0maiiY5jWB5e-wHqi-3X8HMwWg5ZsfzRcLqnh1l-O4WuItvuZHC3t4LMNndP9NTp0gjly3VPnlbl-9Il6-Lyixrx5N1umVqoZz7wBea5wRvqfk15q4d68li3-iUMMHmxSlW8WBwplLFSVsbSqgo0V5ODyWk9VPss3laBWZdJDc')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Biceps</h3>
+<span class="font-label-lg text-label-lg text-primary-container">12 Exercises</span>
+</div>
+</div>
+<!-- Category Card: Chest -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Chest')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Macro photography of a professional athlete's chest and pectoral muscles during a bench press session in a high-tech gym. The aesthetic is modern corporate fitness, with cold blue ambient lighting and intense electric lime accent lights on the equipment. The shot captures sweat and effort in a highly stylized, professional photography manner with deep contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfZJUkkCEoBDbhHLwhri-wHB6jzLw1H0LAzVBv6Zy9WmCviaezGMzCIkTKU7AgTDtxN010UVYZrirnyuqo574yxK2UM17gpbt0BpvDHRnuSoSBDZkLKqsFRwytC9a3jbBtJ-KeihiW40l_aREZZL8eLlM6NyG6zKcTHzuhcx_LEcxXL6dveGaHg8fPqLhw8DGWVsY9MlOouKJRrdMJ8A2iI2Jkw7k8q4IJneXCEPn2mX0rIRQ6gFk_2Tfn5QwwtAOUlZl_tv41s9J6')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Chest</h3>
+<span class="font-label-lg text-label-lg text-primary-container">18 Exercises</span>
+</div>
+</div>
+<!-- Category Card: Back -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Back')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Dramatically lit back muscles of a bodybuilder performing a pull-up. The setting is a minimalist, industrial-style gym with dark charcoal walls and polished concrete floors. High-key light catches the definition of the lats and rhomboids. The style is sharp, clean, and professional, maintaining a consistent high-intensity athletic mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUgboqyJwWyqjlAJCmm6cui8tDiaHxqs98XJSQhbluUu7ZfHeBeDKFZdf2zIkPFxGx7DwHaNFhP0pIcgMpvL4C7o7iiRRZWCWvJwyqZH9wleZfhsGIHQQtsq0IXVHVNX2t0ZiC9PnbjORnkU-5DF0jxg0B-D3CV3_-H1REZY8cu8RjGaY7cZR2udMjbpS8PwPEPPEmV0HCn7fQoVHIiJawcQmfZwMYO73NLH0KBS3v60GN3fc8UwA4BFEPes1bXOqbbzvPNuv-wEVd')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Back</h3>
+<span class="font-label-lg text-label-lg text-primary-container">15 Exercises</span>
+</div>
+</div>
+<!-- Category Card: Legs -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Legs')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of leg quadriceps and calf muscles tensed during a squat at a premium performance center. Dark theme aesthetic with high-contrast lighting highlighting muscle striations. The background features blurred high-end gym equipment with electric lime indicators and sleek black surfaces. The atmosphere is energetic and powerful." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAOYb2orO71Uabfum4GXIs2hJb65Y_Cw0xBaC7vYMEFALxCb76SIRN3-lBOwSBODUvmHufgMzNLZP4Q89TU_wFDNtOBtUH4gatH2Skd-MyPcyFZ14eZ6iIw4Tj-vdgfAyZMCiLLDmSBvxb_XHLtPJoGfB-v4Q464LCvZdVs1WJymW4n8oX6NNGEBejKggunKPfOSAb0YOTBLoOlIZao6ePsmd3m9YCMjnUWZgeXS5bAx70ISXWCml2yKgb9oTjFknXIgySq5R53pIz')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Legs</h3>
+<span class="font-label-lg text-label-lg text-primary-container">24 Exercises</span>
+</div>
+</div>
+<!-- Category Card: Shoulders -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Shoulders')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Professional athlete performing shoulder presses with dumbbells in a high-contrast gym setting. Sharp overhead lighting creates dramatic shadows on the deltoids. The overall tone is dark and focused, utilizing a obsidian and electric lime color scheme. The visual style is crisp and commercial-grade sports photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWFzNu9Gd7SXGtBJgfUxAtNJ7kCr4jsVApmmOO93mhWbfi-7Cnd4rVjykDnHibcnSgg8BvhIotFCxtcwCLOgSlWusVdYVNvgbwA1CYnXSgNV2x2NOegwGrRa16hzKhgVkK7QBVU1Xyw4mDy8dhU_3Nsu5ayrjN2XqZe8pwpjTWopuhtApgwmvAALC3LSsm4wyg9CmjMlOxeM661Wq_sxLSEbOajpUhDDyzROKxhu1lhFO1GayRjN_h8NlOv_G6Bz128hO8z92JM9Bi')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Shoulders</h3>
+<span class="font-label-lg text-label-lg text-primary-container">10 Exercises</span>
+</div>
+</div>
+<!-- Category Card: Triceps -->
+<div class="group relative aspect-square rounded-xl overflow-hidden cursor-pointer active:scale-95 transition-all duration-200 border border-outline-variant/30 hover:border-primary-container/50" onclick="filterExercises('Triceps')">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Focused shot of triceps muscle engagement during a cable pushdown in a luxury fitness studio. The scene is dominated by deep blacks and cool cyan lighting, with sharp highlights reflecting off the cable machine. Modern corporate aesthetic, emphasizing precision and strength. High-resolution sports portraiture style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUUJ6DPGhBHFV-j2vJaHHUkFLCTOTZd8HN08Iflhk2rSrUa_niNb_0_9xt0GfQWNYY7-qBYp_CJgNDJRlTyjDohYQIbsqpCP1Sc28WiuPeDYqT_Intq43seDVLDkiu-TACJSFoeY_GiKcZCM6JtGEvbU-p2ViFK2Tw5vfDFZ3xArPmbWLQL_4_zT_lxkwKk4AU4cWBJLgFYoB1oKQTkk11OCzH_s_10XaGEBOiOgqT1qTZMrwWhOt6mdmo23wbKWwXKf6dSWI8jVU7')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-md z-20">
+<h3 class="font-title-md text-title-md text-white">Triceps</h3>
+<span class="font-label-lg text-label-lg text-primary-container">8 Exercises</span>
+</div>
+</div>
+</div>
+<!-- Filtered List View (Hidden by default) -->
+<div class="hidden flex-col gap-md animate-in fade-in slide-in-from-right duration-300" id="filtered-view">
+<button class="flex items-center gap-2 text-primary-container font-label-lg text-label-lg mb-md" onclick="resetGrid()">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                BACK TO GROUPS
+            </button>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-sm" id="category-title">Biceps</h2>
+<div class="flex flex-col gap-sm" id="exercise-list">
+<!-- Dynamic Items Inserted via JS -->
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-surface dark:bg-surface/80 shadow-lg z-50 backdrop-blur-md border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-lg text-label-lg">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">exercise</span>
+<span class="font-label-lg text-label-lg">Gym</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-label-lg text-label-lg">Recipes</span>
+</a>
+</nav>
+<script>
+        const exercises = {
+            'Biceps': ['Hammer Curl', 'Barbell Curl', 'Incline Dumbbell Curl', 'Preacher Curl', 'Concentration Curl'],
+            'Chest': ['Flat Bench Press', 'Incline Dumbbell Press', 'Chest Fly', 'Push-ups', 'Dips'],
+            'Back': ['Deadlift', 'Lat Pulldown', 'Bent Over Row', 'Pull-ups', 'Face Pulls'],
+            'Legs': ['Back Squat', 'Leg Press', 'Hamstring Curls', 'Calf Raises', 'Lunges'],
+            'Shoulders': ['Overhead Press', 'Lateral Raise', 'Front Raise', 'Reverse Pec Deck'],
+            'Triceps': ['Tricep Pushdown', 'Skull Crushers', 'Close Grip Bench Press', 'Overhead Extension']
+        };
+
+        function filterExercises(category) {
+            const grid = document.getElementById('category-grid');
+            const filteredView = document.getElementById('filtered-view');
+            const title = document.getElementById('category-title');
+            const list = document.getElementById('exercise-list');
+
+            title.innerText = category;
+            list.innerHTML = '';
+
+            exercises[category].forEach(ex => {
+                const item = document.createElement('div');
+                item.className = 'glass-card p-md rounded-xl flex items-center justify-between border-l-4 border-primary-container active:scale-95 transition-transform';
+                item.innerHTML = `
+                    <div class="flex flex-col">
+                        <span class="font-title-md text-title-md text-on-surface">${ex}</span>
+                        <span class="font-label-lg text-label-lg text-on-surface-variant">4 Sets • 8-12 Reps</span>
+                    </div>
+                    <span class="material-symbols-outlined text-primary-container">chevron_right</span>
+                `;
+                list.appendChild(item);
+            });
+
+            grid.classList.add('hidden');
+            filteredView.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetGrid() {
+            const grid = document.getElementById('category-grid');
+            const filteredView = document.getElementById('filtered-view');
+
+            filteredView.classList.add('hidden');
+            grid.classList.remove('hidden');
+        }
+
+        // Micro-interaction: visual feedback for tap
+        document.querySelectorAll('[onclick]').forEach(el => {
+            el.addEventListener('mousedown', () => el.classList.add('opacity-70'));
+            el.addEventListener('mouseup', () => el.classList.remove('opacity-70'));
+            el.addEventListener('mouseleave', () => el.classList.remove('opacity-70'));
+        });
+    </script>
+</body></html>

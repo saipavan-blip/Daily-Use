@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Exercise Details - Daily Use</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom Scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 10px;
+        }
+        .glass-card {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .muscle-accent {
+            border-left: 4px solid #caf300;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#001b3f", "on-surface": "#181c22", "on-tertiary-container": "#fffbff", "on-primary": "#ffffff", "surface-container": "#ecedf7", "surface-variant": "#e0e2ec", "on-tertiary-fixed-variant": "#763400", "secondary-container": "#e1e3e4", tertiary: "#964400", "on-error-container": "#93000a", "primary-container": "#0072e3", "on-tertiary": "#ffffff", secondary: "#5c5f60", "on-secondary-container": "#626566", background: "#f9f9ff", "on-secondary-fixed": "#191c1d", "on-surface-variant": "#414753", "on-secondary": "#ffffff", "primary-fixed": "#d7e3ff", "surface-container-highest": "#e0e2ec", "inverse-surface": "#2d3038", "tertiary-fixed": "#ffdbc9", "on-primary-fixed-variant": "#00458e", surface: "#f9f9ff", error: "#ba1a1a", "on-background": "#181c22", "on-error": "#ffffff", "surface-container-high": "#e6e8f1", "on-tertiary-fixed": "#321200", primary: "#005ab6", "surface-dim": "#d8dae3", "tertiary-fixed-dim": "#ffb68c", "secondary-fixed": "#e1e3e4", "secondary-fixed-dim": "#c5c7c8", "surface-tint": "#005cba", "on-primary-container": "#fefcff", "tertiary-container": "#bd5700", outline: "#717785", "error-container": "#ffdad6", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eff0fa", "primary-fixed-dim": "#abc7ff", "surface-container-low": "#f2f3fd", "surface-bright": "#f9f9ff", "on-secondary-fixed-variant": "#454748", "surface-container-lowest": "#ffffff", "outline-variant": "#c1c6d5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {lg: "24px", md: "16px", xs: "4px", base: "4px", sm: "8px", "container-margin": "16px", xl: "32px", gutter: "12px"}, fontFamily: {"label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "metric-xl": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-lg": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "title-md": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "metric-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- Top Navigation Bar -->
+<header class="bg-background dark:bg-background flex items-center justify-between px-container-margin h-14 w-full z-40 top-0 sticky">
+<button class="text-on-surface hover:opacity-80 active:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary tracking-tight">Barbell Curl</h1>
+<button class="text-on-surface hover:opacity-80 active:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+</header>
+<main class="max-w-md mx-auto px-container-margin mt-2">
+<!-- Video Player Placeholder -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container-highest shadow-2xl mb-lg group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A focused athlete in a high-end corporate dark gym performing a barbell curl. The lighting is cinematic and dramatic, highlighting muscular definition with electric lime and vibrant cyan rim lighting. The atmosphere is professional and intense, set against a dark obsidian background with subtle tech textures. The video frame shows high-quality production value." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDs1a8MjWbCWk8wcQpuNGJWLprbyDA0WdL5j_YU-Fjpa36dkBJWB1Ew1TucNm8kMGmMhJd2egaiJwVcw8b-uAJ6mbVpb11yeqPtYip9Iw0pxSrV0taRVilemVEm5FKlLQikOYKBD5Iy_mTONlniHaq964ob9iJXF3zVTOaQG3r9R3WIgwAGpa7k5W7KMx0Jz7JXLuFW8Mr1PEGX6xDqE9JcVdXsrTcDMyeqYRb15Qp0RAjjESPeerc-BLcLYY5CsKljBM4_9XjXR-Ty')">
+</div>
+<!-- Play Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px] transition-opacity group-hover:bg-black/20">
+<button class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-lg active:scale-90 transition-all">
+<span class="material-symbols-outlined !text-4xl fill-icon" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="absolute bottom-0 left-0 w-full h-1.5 bg-surface-container">
+<div class="h-full w-2/3 bg-gradient-to-r from-primary-container to-secondary-container rounded-r-full"></div>
+</div>
+</div>
+<!-- Description Section -->
+<section class="mb-lg">
+<h2 class="font-title-md text-title-md text-primary mb-sm">Description</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                The barbell curl is a classic isolation exercise used to build strength and size in the biceps. It targets the biceps brachii, brachialis, and brachioradialis. Focus on maintaining a stable core and avoiding any swinging of the upper body during the movement.
+            </p>
+</section>
+<!-- Bento Grid Metadata -->
+<div class="grid grid-cols-2 gap-gutter mb-lg">
+<div class="bg-surface-container p-md rounded-xl muscle-accent flex flex-col justify-between">
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Target Muscle</span>
+<span class="font-title-md text-title-md text-secondary-fixed-dim mt-xs">Biceps</span>
+</div>
+<div class="bg-surface-container p-md rounded-xl flex flex-col justify-between">
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Sets</span>
+<span class="font-metric-xl text-metric-xl text-primary leading-none mt-xs">3-4</span>
+</div>
+<div class="bg-surface-container p-md rounded-xl col-span-2 flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Target Reps</span>
+<div class="font-metric-xl text-metric-xl text-primary leading-none mt-xs">8-12</div>
+</div>
+<div class="h-12 w-12 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline" data-icon="repeat">repeat</span>
+</div>
+</div>
+</div>
+<!-- Notes Section -->
+<section class="mb-xl">
+<div class="flex items-center gap-sm mb-sm">
+<span class="material-symbols-outlined text-primary-container" data-icon="sticky_note_2">sticky_note_2</span>
+<h2 class="font-title-md text-title-md text-primary">Personal Notes</h2>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant/30 italic text-on-surface-variant font-body-md">
+                "Keep elbows pinned to your sides. Squeeze at the top of the movement for 1 second. Control the descent (eccentric) for a 3-count."
+            </div>
+</section>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-sm">
+<button class="h-14 w-full bg-surface-container-high text-on-surface rounded-full font-title-md flex items-center justify-center gap-sm active:scale-95 transition-all hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+                Replace Video
+            </button>
+<button class="h-14 w-full border-2 border-error/30 text-error rounded-full font-title-md flex items-center justify-center gap-sm active:scale-95 transition-all hover:bg-error/10">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+                Delete Exercise
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-surface dark:bg-surface/80 z-50 backdrop-blur-md shadow-lg border-t border-outline-variant">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200 cursor-pointer px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-label-lg text-label-lg mt-1">Reminders</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined fill-icon" data-icon="exercise">exercise</span>
+<span class="font-label-lg text-label-lg">Gym</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200 cursor-pointer px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-label-lg text-label-lg mt-1">Recipes</span>
+</div>
+</nav>
+<script>
+        // Simple micro-interaction for play button
+        const playBtn = document.querySelector('.bg-primary-container');
+        if (playBtn) {
+            playBtn.addEventListener('click', () => {
+                const icon = playBtn.querySelector('.material-symbols-outlined');
+                if (icon.innerText === 'play_arrow') {
+                    icon.innerText = 'pause';
+                    playBtn.classList.add('bg-secondary-container');
+                    playBtn.classList.remove('bg-primary-container');
+                } else {
+                    icon.innerText = 'play_arrow';
+                    playBtn.classList.add('bg-primary-container');
+                    playBtn.classList.remove('bg-secondary-container');
+                }
+            });
+        }
+    </script>
+</body></html>

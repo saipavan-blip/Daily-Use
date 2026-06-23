@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-card {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #444932;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#001b3f", "on-surface": "#181c22", "on-tertiary-container": "#fffbff", "on-primary": "#ffffff", "surface-container": "#ecedf7", "surface-variant": "#e0e2ec", "on-tertiary-fixed-variant": "#763400", "secondary-container": "#e1e3e4", tertiary: "#964400", "on-error-container": "#93000a", "primary-container": "#0072e3", "on-tertiary": "#ffffff", secondary: "#5c5f60", "on-secondary-container": "#626566", background: "#f9f9ff", "on-secondary-fixed": "#191c1d", "on-surface-variant": "#414753", "on-secondary": "#ffffff", "primary-fixed": "#d7e3ff", "surface-container-highest": "#e0e2ec", "inverse-surface": "#2d3038", "tertiary-fixed": "#ffdbc9", "on-primary-fixed-variant": "#00458e", surface: "#f9f9ff", error: "#ba1a1a", "on-background": "#181c22", "on-error": "#ffffff", "surface-container-high": "#e6e8f1", "on-tertiary-fixed": "#321200", primary: "#005ab6", "surface-dim": "#d8dae3", "tertiary-fixed-dim": "#ffb68c", "secondary-fixed": "#e1e3e4", "secondary-fixed-dim": "#c5c7c8", "surface-tint": "#005cba", "on-primary-container": "#fefcff", "tertiary-container": "#bd5700", outline: "#717785", "error-container": "#ffdad6", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eff0fa", "primary-fixed-dim": "#abc7ff", "surface-container-low": "#f2f3fd", "surface-bright": "#f9f9ff", "on-secondary-fixed-variant": "#454748", "surface-container-lowest": "#ffffff", "outline-variant": "#c1c6d5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {lg: "24px", md: "16px", xs: "4px", base: "4px", sm: "8px", "container-margin": "16px", xl: "32px", gutter: "12px"}, fontFamily: {"label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "metric-xl": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-lg": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "title-md": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "metric-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background dark:bg-background z-40">
+<div class="flex items-center justify-between px-container-margin h-14 w-full">
+<button class="active:scale-95 transition-transform hover:opacity-80 flex items-center justify-center p-2">
+<span class="material-symbols-outlined text-primary" data-icon="fitness_center">fitness_center</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary">Daily Use</h1>
+<button class="active:scale-95 transition-transform hover:opacity-80 flex items-center justify-center bg-primary-container text-on-primary-container p-2 rounded-xl">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</header>
+<main class="px-container-margin mt-lg max-w-xl mx-auto space-y-xl">
+<!-- Welcome Greeting & Visual Accent -->
+<section class="relative h-32 rounded-3xl overflow-hidden mb-lg shadow-2xl">
+<div class="relative z-10 p-lg flex flex-col justify-end h-full">
+<p class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-widest">Today's Focus</p>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white">4 Reminders</h2>
+</div>
+</section>
+<!-- Active Reminders Section -->
+<section class="space-y-md">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface">Active Reminders</h3>
+<span class="font-label-lg text-label-lg text-primary-fixed bg-primary-container/20 px-3 py-1 rounded-full">4 pending</span>
+</div>
+<div class="grid gap-gutter">
+<!-- Reminder Item 1 -->
+<div class="group relative bg-surface-container-high rounded-2xl p-md flex items-center justify-between border-l-4 border-primary-container transition-all hover:bg-surface-container-highest">
+<div class="flex items-center gap-md">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-md bg-transparent border-2 border-outline-variant checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer appearance-none" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-[16px] pointer-events-none opacity-0 transition-opacity peer-checked:opacity-100 text-on-primary-container">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Morning Protein Shake</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span class="font-body-md text-body-md">7:00 AM</span>
+<span class="mx-1 text-outline">•</span>
+<span class="font-body-md text-body-md">Everyday</span>
+</div>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Reminder Item 2 -->
+<div class="group relative bg-surface-container-high rounded-2xl p-md flex items-center justify-between border-l-4 border-secondary-container transition-all hover:bg-surface-container-highest">
+<div class="flex items-center gap-md">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-md bg-transparent border-2 border-outline-variant checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer appearance-none" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-[16px] pointer-events-none opacity-0 text-on-primary-container">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Gym Session: Upper Body</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span class="font-body-md text-body-md">5:30 PM</span>
+<span class="mx-1 text-outline">•</span>
+<span class="font-body-md text-body-md">Mon, Wed, Fri</span>
+</div>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Reminder Item 3 -->
+<div class="group relative bg-surface-container-high rounded-2xl p-md flex items-center justify-between border-l-4 border-primary-container transition-all hover:bg-surface-container-highest">
+<div class="flex items-center gap-md">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-md bg-transparent border-2 border-outline-variant checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer appearance-none" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-[16px] pointer-events-none opacity-0 text-on-primary-container">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Take Supplements</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+<span class="font-body-md text-body-md">9:00 PM</span>
+<span class="mx-1 text-outline">•</span>
+<span class="font-body-md text-body-md">Everyday</span>
+</div>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Reminder Item 4 -->
+<div class="group relative bg-surface-container-high rounded-2xl p-md flex items-center justify-between border-l-4 border-outline transition-all hover:bg-surface-container-highest">
+<div class="flex items-center gap-md">
+<div class="relative flex items-center justify-center">
+<input class="w-6 h-6 rounded-md bg-transparent border-2 border-outline-variant checked:bg-primary-container checked:border-primary-container transition-colors cursor-pointer appearance-none" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-[16px] pointer-events-none opacity-0 text-on-primary-container">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Meal Prep Sunday</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-body-md text-body-md">11:00 AM</span>
+<span class="mx-1 text-outline">•</span>
+<span class="font-body-md text-body-md">Sundays</span>
+</div>
+</div>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Completed Section -->
+<section class="space-y-md pt-lg border-t border-surface-variant">
+<div class="flex items-center justify-between opacity-60">
+<h3 class="font-title-md text-title-md text-on-surface">Completed</h3>
+<span class="font-label-lg text-label-lg text-on-surface-variant">2 today</span>
+</div>
+<div class="grid gap-gutter opacity-40">
+<!-- Completed Item 1 -->
+<div class="bg-surface-container-low rounded-2xl p-md flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="flex items-center justify-center w-6 h-6 bg-primary-container rounded-md">
+<span class="material-symbols-outlined text-[16px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface line-through">Check Body Weight</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="font-body-md text-body-md">6:30 AM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Completed Item 2 -->
+<div class="bg-surface-container-low rounded-2xl p-md flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="flex items-center justify-center w-6 h-6 bg-primary-container rounded-md">
+<span class="material-symbols-outlined text-[16px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface line-through">Drink 1L Water</h4>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<span class="font-body-md text-body-md">10:00 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-surface dark:bg-surface/80 z-50 backdrop-blur-md shadow-lg border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined active-icon" data-icon="notifications">notifications</span>
+<span class="font-label-lg text-label-lg">Reminders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="exercise">exercise</span>
+<span class="font-label-lg text-label-lg">Gym</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-label-lg text-label-lg">Recipes</span>
+</button>
+</nav>
+<script>
+        // Simple Interaction logic for checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const parent = this.closest('.group');
+                if (this.checked) {
+                    parent.style.opacity = '0.4';
+                    parent.querySelector('h4').style.textDecoration = 'line-through';
+                } else {
+                    parent.style.opacity = '1';
+                    parent.querySelector('h4').style.textDecoration = 'none';
+                }
+            });
+        });
+
+        // Atmospheric micro-interaction for cards
+        document.querySelectorAll('.bg-surface-container-high').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

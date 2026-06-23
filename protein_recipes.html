@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>High Protein Recipes | Daily Use</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed": "#001b3f", "on-surface": "#181c22", "on-tertiary-container": "#fffbff", "on-primary": "#ffffff", "surface-container": "#ecedf7", "surface-variant": "#e0e2ec", "on-tertiary-fixed-variant": "#763400", "secondary-container": "#e1e3e4", tertiary: "#964400", "on-error-container": "#93000a", "primary-container": "#0072e3", "on-tertiary": "#ffffff", secondary: "#5c5f60", "on-secondary-container": "#626566", background: "#f9f9ff", "on-secondary-fixed": "#191c1d", "on-surface-variant": "#414753", "on-secondary": "#ffffff", "primary-fixed": "#d7e3ff", "surface-container-highest": "#e0e2ec", "inverse-surface": "#2d3038", "tertiary-fixed": "#ffdbc9", "on-primary-fixed-variant": "#00458e", surface: "#f9f9ff", error: "#ba1a1a", "on-background": "#181c22", "on-error": "#ffffff", "surface-container-high": "#e6e8f1", "on-tertiary-fixed": "#321200", primary: "#005ab6", "surface-dim": "#d8dae3", "tertiary-fixed-dim": "#ffb68c", "secondary-fixed": "#e1e3e4", "secondary-fixed-dim": "#c5c7c8", "surface-tint": "#005cba", "on-primary-container": "#fefcff", "tertiary-container": "#bd5700", outline: "#717785", "error-container": "#ffdad6", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eff0fa", "primary-fixed-dim": "#abc7ff", "surface-container-low": "#f2f3fd", "surface-bright": "#f9f9ff", "on-secondary-fixed-variant": "#454748", "surface-container-lowest": "#ffffff", "outline-variant": "#c1c6d5"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {lg: "24px", md: "16px", xs: "4px", base: "4px", sm: "8px", "container-margin": "16px", xl: "32px", gutter: "12px"}, fontFamily: {"label-lg": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "body-lg": ["Inter"], "title-md": ["Inter"], "display-lg": ["Inter"], "metric-xl": ["Inter"], "headline-lg-mobile": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-lg": ["12px", {lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "title-md": ["18px", {lineHeight: "24px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "metric-xl": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}]}}}};</script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .recipe-card-gradient {
+            background: linear-gradient(to top, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.4) 50%, transparent 100%);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-active-indicator {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky bg-background dark:bg-background z-40">
+<div class="flex items-center justify-between px-container-margin h-14 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary dark:text-primary">fitness_center</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary">Daily Use</h1>
+</div>
+<button class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-primary dark:text-primary">add</span>
+</button>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="pb-24 pt-4 px-container-margin max-w-2xl mx-auto">
+<!-- Hero Header -->
+<section class="mb-lg">
+<h2 class="font-display-lg text-display-lg text-primary mb-xs">Fuel Your Body</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm">High-protein meals precision-engineered for performance and recovery.</p>
+</section>
+<!-- Category Chips (Bento Style Scroll) -->
+<nav class="flex overflow-x-auto gap-sm scrollbar-hide mb-xl py-2 -mx-container-margin px-container-margin">
+<button class="flex-none px-5 py-2 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg active:scale-95 transition-transform">
+                All Recipes
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Breakfast
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Lunch
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Dinner
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Snacks
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Pre-Workout
+            </button>
+<button class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors font-label-lg text-label-lg active:scale-95">
+                Post-Workout
+            </button>
+</nav>
+<!-- Recipe Feed (Asymmetric Card Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Recipe Card 1 -->
+<article class="group relative rounded-xl overflow-hidden bg-surface-container aspect-[4/5] shadow-lg border border-outline-variant/30 transition-all hover:border-primary-container/50">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A gourmet high-protein bowl featuring seared ahi tuna slices, vibrant green edamame, shredded purple cabbage, and a base of quinoa. The lighting is dramatic and moody, utilizing deep obsidian shadows and sharp highlights on the fresh fish. Professional culinary photography style with a focus on macro textures and rich, vibrant colors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE0rsg97NDEdmS0TMEzaEtSlBsxxjnT7Rg_bSiZEyUQuq-D9z53dsLbfA_9XSRF0YK8oq0dG-ZDcUtAjkD0CNkRNHIibwiWmP93Z214LgDYmSkW_LnwskrIIwhjgxLLO4pHTtT2mYOwQ-4DMriqfiWy0BgoetAjpuUQIdSxF5w8KY6rA-ydDVL7E_yavDEYZrcmO-oKOybAMr0tqtZ6Dearii45Z_KukStDsa88ZM-haPjVIHYjUJByVZI0h3g0TqBIJ7DIvzoOt9N')">
+</div>
+<div class="absolute inset-0 recipe-card-gradient"></div>
+</div>
+<div class="absolute top-4 right-4 z-20 flex gap-2">
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-error hover:bg-error/20 transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-md z-10 w-full">
+<span class="inline-block px-2 py-0.5 rounded-sm bg-primary-container text-on-primary-container font-label-lg text-[10px] uppercase tracking-wider mb-2">Post-Workout</span>
+<h3 class="font-title-md text-title-md text-white mb-2">Ahi Tuna Power Bowl</h3>
+<div class="flex items-center gap-4">
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-secondary-container">45</span>
+<span class="font-label-lg text-on-surface-variant uppercase">Protein</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-on-surface">520</span>
+<span class="font-label-lg text-on-surface-variant uppercase">kcal</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Recipe Card 2 -->
+<article class="group relative rounded-xl overflow-hidden bg-surface-container aspect-[4/5] shadow-lg border border-outline-variant/30 transition-all hover:border-primary-container/50">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A close-up shot of grilled chicken breast strips seasoned with dark herbs, served over a bed of roasted sweet potato cubes and steamed asparagus. The scene is lit with warm, cinematic lighting that accentuates the glistening juices of the meat. High-contrast, professional fitness meal prep aesthetic with a dark, clean background and vibrant food styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3fEmJiSXq9OJ4OelHm2w_Kf8jKgV2vRGb9GIqdaestsNuJRvoZc6Apbj-4HNeaDAUdJ3om7SGIbqA8eyLdKg8oIpvEuFvSM7McPw0gqqdvswJN27SCaAHBHz4VZCbHOKFRjv8UZo8AWN7ELFeeOAuBfDqJ_7K_0a_r-BF7wbGa64X6SfbXfYz0qNoSp517ugvzPIZ5kRn_CJDuBVjviUs-ChzIJ0evRI-Ur0yeeffuZl5ilII7qcEdNoGofV3YmWYqksVflaXc0-q')">
+</div>
+<div class="absolute inset-0 recipe-card-gradient"></div>
+</div>
+<div class="absolute top-4 right-4 z-20 flex gap-2">
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-error hover:bg-error/20 transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-md z-10 w-full">
+<span class="inline-block px-2 py-0.5 rounded-sm bg-secondary-container text-on-secondary-container font-label-lg text-[10px] uppercase tracking-wider mb-2">Lunch</span>
+<h3 class="font-title-md text-title-md text-white mb-2">Herbed Chicken &amp; Sweet Potato</h3>
+<div class="flex items-center gap-4">
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-secondary-container">38</span>
+<span class="font-label-lg text-on-surface-variant uppercase">Protein</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-on-surface">410</span>
+<span class="font-label-lg text-on-surface-variant uppercase">kcal</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Recipe Card 3 -->
+<article class="group relative rounded-xl overflow-hidden bg-surface-container aspect-[4/5] shadow-lg border border-outline-variant/30 transition-all hover:border-primary-container/50">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A macro shot of a creamy Greek yogurt parfait in a glass bowl, layered with fresh dark blueberries, crunchy almond granola, and a dusting of whey protein isolate. Soft, bright lighting creates a crisp, clean aesthetic. The focus is sharp on the texture of the yogurt and the glistening berries, reflecting a professional high-key studio setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqi7F-uzmOhUS8no-3hEx2SMa0UT3PoGR-GXSRYnVPhesmEh3hT_04vZmDcBUXecvZEr-94-Xn4yk9XTcwD88aD-nnJOkmProCk4jH7J49jx97hgAv_6i17g9UsubnDfYKJRorgCJSMkwjpxrh9PjrR27dvPJhtE8LYkJocunbnlVwFhatzdVPZzPWMc2Tkiun9M2ckHBsaCmU-OC_uZ1m0Ut04jUogAZMdnHX24nExMlcFsmc8g035VPcTSdsQ2GWGnS7g0Y-Jz7Q')">
+</div>
+<div class="absolute inset-0 recipe-card-gradient"></div>
+</div>
+<div class="absolute top-4 right-4 z-20 flex gap-2">
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-error hover:bg-error/20 transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-md z-10 w-full">
+<span class="inline-block px-2 py-0.5 rounded-sm bg-surface-variant text-on-surface font-label-lg text-[10px] uppercase tracking-wider mb-2">Breakfast</span>
+<h3 class="font-title-md text-title-md text-white mb-2">Blueberry Whey Parfait</h3>
+<div class="flex items-center gap-4">
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-secondary-container">32</span>
+<span class="font-label-lg text-on-surface-variant uppercase">Protein</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-on-surface">290</span>
+<span class="font-label-lg text-on-surface-variant uppercase">kcal</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Recipe Card 4 -->
+<article class="group relative rounded-xl overflow-hidden bg-surface-container aspect-[4/5] shadow-lg border border-outline-variant/30 transition-all hover:border-primary-container/50">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A top-down view of a thick-cut seared flank steak sliced thin, served with a side of sautéed kale and roasted garlic cloves. The meat is perfectly medium-rare with a deep brown crust. The lighting is cool and moody, highlighting the marbling of the meat and the glossy texture of the greens. A professional dark-mode culinary aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8Zx4kFynJSYdOTf1wez4PXW0q5Y94VmORdzC8mmZKtmZ34jA99pyvpEyd63n82cMADwJH9GK5vLQxHm2-DPyuTYmLT5RVQeDt_aOVaEGSim8v1KRUpfRU_Mdd9ki2s5ofSLpkYMgEfeQF77lUpAuNj42GfGGC-ZDY0fF4AOPSvxQbx4WkzPO-ua-129czsgczBw5Cl05zVnfJfIgdaZlwnd6IA-UwMp95fASQ8LjenxCUIkHeLs1JjODTJRn9RB7krQus-JMI7BXO')">
+</div>
+<div class="absolute inset-0 recipe-card-gradient"></div>
+</div>
+<div class="absolute top-4 right-4 z-20 flex gap-2">
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-2 rounded-full bg-black/40 backdrop-blur-md text-error hover:bg-error/20 transition-colors">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 p-md z-10 w-full">
+<span class="inline-block px-2 py-0.5 rounded-sm bg-primary-fixed-dim text-on-primary-fixed font-label-lg text-[10px] uppercase tracking-wider mb-2">Dinner</span>
+<h3 class="font-title-md text-title-md text-white mb-2">Iron-Rich Seared Steak</h3>
+<div class="flex items-center gap-4">
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-secondary-container">52</span>
+<span class="font-label-lg text-on-surface-variant uppercase">Protein</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-metric-xl text-2xl text-on-surface">640</span>
+<span class="font-label-lg text-on-surface-variant uppercase">kcal</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-4 bg-surface dark:bg-surface/80 backdrop-blur-md border-t border-outline-variant shadow-lg z-50">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-lg text-label-lg">Reminders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined">exercise</span>
+<span class="font-label-lg text-label-lg">Gym</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-5 py-1 transition-all duration-200 active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-lg text-label-lg">Recipes</span>
+</button>
+</nav>
+<!-- Micro-interactions Script -->
+<script>
+        document.querySelectorAll('article').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Dynamic Filter Chip Behavior
+        const chips = document.querySelectorAll('nav button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary-container', 'text-on-primary-container');
+                    c.classList.add('bg-surface-container-high', 'text-on-surface');
+                });
+                chip.classList.add('bg-primary-container', 'text-on-primary-container');
+                chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+            });
+        });
+    </script>
+</body></html>
